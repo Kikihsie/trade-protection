@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en" data-page-node-id="LBgWzAHDlnldT3FiYupdgy">
+<head data-page-node-id="y8KICdUp7hwoSAoDnyHR1d">
+<meta charset="utf-8" data-page-node-id="PwHQ0LPX9DhacciUBvDL3S">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="eGGSCk1Dw6FfHiO0KJ9YEt">
+<title>Trade Protection - the four welfare areas, side by side</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:#f6f7f9;color:#151a1f;line-height:1.5;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .shell{max-width:1740px;margin:0 auto;padding:22px 20px 64px}
+
+  header.top{margin-bottom:14px}
+  .kicker{margin:0;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8b939c}
+  h1{margin:6px 0 6px;font-size:24px;font-weight:650;letter-spacing:-.015em}
+  .lede{margin:0;font-size:13.5px;color:#5b646e;max-width:1060px}
+
+  .toolbar{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    margin:18px 0 14px;padding:11px 14px;background:#fff;border:1px solid #e4e8ec;border-radius:11px;
+  }
+  .toolbar .chk{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#3d454e;cursor:pointer}
+  .toolbar .sep{width:1px;height:20px;background:#e4e8ec}
+  .toolbar .spacer{flex:1}
+  button.act{
+    font:inherit;font-size:12.5px;padding:8px 14px;border-radius:8px;cursor:pointer;
+    border:1px solid #dfe3e8;background:#fff;color:#3d454e;transition:.13s;
+  }
+  button.act:hover{border-color:#b9c2cc;background:#fafbfc}
+  button.act.primary{background:#1f6b4f;border-color:#1f6b4f;color:#fff;font-weight:600}
+  button.act.primary:hover{background:#1a5c43}
+
+  .panels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}
+  @media (max-width:1560px){.panels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:860px){.panels{grid-template-columns:1fr}}
+
+  .panel{background:#fff;border:1px solid #e4e8ec;border-radius:13px;padding:15px 15px 13px}
+  .phead{display:flex;align-items:baseline;gap:9px;margin-bottom:3px;flex-wrap:wrap}
+  .panel h2{margin:0;font-size:16.5px;font-weight:650;letter-spacing:-.01em}
+  .tag{font-size:10px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;
+       color:#c2540f;background:#fdf1e8;border:1px solid #f5d9c4;border-radius:5px;padding:2px 6px}
+  .psub{margin:0 0 11px;font-size:12.5px;color:#5b646e}
+  .psub b{color:#151a1f}
+
+  .pctl{margin-bottom:8px}
+  .pctl .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px}
+  .pctl label{font-size:12.5px;font-weight:600;color:#3d454e}
+  .pctl .pval{font-size:14.5px;font-weight:700;font-variant-numeric:tabular-nums;color:#1f6b4f}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:3px;
+    background:#e2e7ec;outline:none;margin:5px 0 1px;display:block}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+    background:#1f6b4f;border:3px solid #fff;box-shadow:0 0 0 1px #cfd6dd;cursor:grab}
+  input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#1f6b4f;
+    border:3px solid #fff;box-shadow:0 0 0 1px #cfd6dd;cursor:grab}
+  .pscale{display:flex;justify-content:space-between;font-size:10.5px;color:#98a1aa}
+
+  .stage{padding:2px 0 0}
+  .stage svg{display:block;width:100%;height:auto}
+
+  ul.key{list-style:none;margin:9px 0 0;padding:0;border-top:1px solid #eef1f4}
+  ul.key li{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:12.5px;border-bottom:1px solid #f4f6f8}
+  ul.key li:last-child{border-bottom:0}
+  ul.key .num{width:17px;height:17px;border-radius:50%;flex:none;display:grid;place-items:center;
+    font-size:10.5px;font-weight:700;color:#fff}
+  ul.key .num.dash{border-radius:4px;font-size:9px}
+  ul.key .nm{flex:1;color:#3d454e}
+  ul.key .vl{font-variant-numeric:tabular-nums;font-weight:650;min-width:44px;text-align:right}
+  ul.key .vl.pos{color:#1f6b4f}
+  ul.key .vl.neg{color:#a8322b}
+  ul.key .vl.mid{color:#4d5761}
+  ul.key .vl.zero{color:#98a1aa}
+  ul.key .dir{flex:none;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;
+    padding:2px 6px;border-radius:4px;background:#eef1f4;color:#5b646e}
+  ul.key .dir.gain{background:#e4f3ec;color:#1f6b4f}
+  ul.key .dir.loss{background:#fbe9e8;color:#a8322b}
+  ul.key .dir.money{background:#fbf0da;color:#8f6410}
+  ul.key .dir.move{background:#eef1f4;color:#5b646e}
+  ul.key .in3{font-size:11.5px;color:#98a1aa;white-space:nowrap}
+  /* a row that belongs to the row above it (b and d live inside rectangle 3) */
+  ul.key li.sub{padding-left:15px;position:relative;border-bottom-color:#fafbfc}
+  ul.key li.sub::before{content:'';position:absolute;left:4px;top:-1px;height:52%;width:9px;
+    border-left:1.5px solid #cfd6dd;border-bottom:1.5px solid #cfd6dd;border-bottom-left-radius:6px}
+  ul.key li.sub .num{width:15px;height:15px;font-size:9.5px}
+  .chip-gain{background:#2f9e6f}
+  .chip-gov{background:#c98c14}
+  .chip-dwl{background:#c4453f}
+  .chip-cons{background:#6d5bb5}
+  .chip-rev{background:#2f7fb0}
+  .chip-frame{background:#3d454e}
+
+  .bandnote{margin:9px 0 0;font-size:12px;color:#4d5761;background:#f4f7fa;
+    border-left:3px solid #2e6ca4;border-radius:0 7px 7px 0;padding:8px 10px}
+  .bandnote b{color:#151a1f}
+
+  section.compare{margin-top:20px;background:#fff;border:1px solid #e4e8ec;border-radius:13px;padding:16px 18px 14px}
+  section.compare h2{margin:0 0 3px;font-size:16px;font-weight:650}
+  section.compare p.cs{margin:0 0 12px;font-size:12.5px;color:#5b646e}
+  table.cmp{width:100%;border-collapse:collapse;font-size:13px}
+  table.cmp th,table.cmp td{padding:8px 10px;text-align:right;border-bottom:1px solid #f0f2f5;
+    font-variant-numeric:tabular-nums}
+  table.cmp th:first-child,table.cmp td:first-child{text-align:left;font-variant-numeric:normal}
+  table.cmp thead th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#98a1aa;
+    border-bottom:1px solid #e4e8ec;font-weight:600}
+  table.cmp tr.net td{border-top:1px solid #cfd6dd;border-bottom:0;font-weight:700;background:#fafbfc}
+  table.cmp .dw{font-size:10px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;
+    color:#8b939c;margin-left:2px}
+  table.cmp td.pos .dw{color:#4b8a72}
+  table.cmp td.neg .dw{color:#c07a75}
+  .pos{color:#1f6b4f}
+  .neg{color:#b23b3b}
+  .zero{color:#98a1aa}
+
+  footer.note{margin-top:20px;font-size:12px;color:#98a1aa;max-width:1150px}
+  footer.note code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:11.5px}
+</style>
+</head>
+<body data-page-node-id="i8BkgGZP9K27nySEHHvRUh">
+<div class="shell" data-page-node-id="f7yjv2sgebBV1VdHcOMWCn">
+
+  <header class="top" data-page-node-id="wd5Sb9WF3FPiVqMc4i339L">
+    <p class="kicker" data-page-node-id="i6VH36loczOiRbj9Lz9Cq5">IB DP Economics &middot; 4.2 Types of Trade Protection</p>
+    <h1 data-page-node-id="HNypLdMzycHSwZPmnEqFWS">Which curve shifts &mdash; and who gets each area?</h1>
+    <p class="lede" data-page-node-id="fMDsryO5fJIhyTFNlVSMXw">The first three diagrams show one importing market. In each of them the same four areas tile the band
+      between the world price line and the new price line &mdash; no gaps, no overlaps. What changes is
+      <b data-page-node-id="94MdNORg1gpeqJx4XB5Fja">who ends up with area 3</b>.
+      The fourth applies the <b>same demand and supply curves</b> to an exporting country, where the world
+      price sits <i>above</i> the autarky price &mdash; there the four areas are labelled <b>a</b>&ndash;<b>d</b>.</p>
+  </header>
+
+  <div class="toolbar" data-page-node-id="XZMrDlPgWcqsygpMGWofMK">
+    <button type="button" class="act primary" id="playAll" data-page-node-id="XMO2JkF2DHjV74mmI9jYKC">Animate all four</button>
+    <button type="button" class="act" id="resetAll" data-page-node-id="LZvqEtlfvIXXDKTMKHdRig">Reset</button>
+    <span class="sep" data-page-node-id="6NbLM7pKEBYgMJ0cNKdTHN"></span>
+    <label class="chk" data-page-node-id="bwyVn8KmyBVz0mjECIaJxV"><input type="checkbox" id="cAreas" checked data-page-node-id="6ioFKzGyGR0qyCMkTUvDVK"> Shade the welfare areas</label>
+    <label class="chk" data-page-node-id="6MuRC8qeSQn5KH5S4zV85v"><input type="checkbox" id="cGuides" checked data-page-node-id="UF5qHHx8paP3CBFsXVyk9r"> Show before / after guides</label>
+    <span class="spacer" data-page-node-id="KXzQRIrtWS6XHHDMlEH9YF"></span>
+    <span id="hintText" style="font-size:12px;color:#8b939c" data-page-node-id="nPP71kwcuVBH1XvSyg6CCz"></span>
+  </div>
+
+  <div class="panels" id="panels" data-page-node-id="0trq9Gl5kgm6A88zl7ImkY"></div>
+
+  <section class="compare" data-page-node-id="bzVNKnILAa632p2ctrTpSJ">
+    <h2 data-page-node-id="bsrKybfPFTmBLzAakwmcyg">Same areas, different destinations</h2>
+    <p class="cs" data-page-node-id="IuuqVNlffKR6CGiuPUFiEp">Figures update live with the sliders. Every number here is a
+      <b>size</b>, never a signed figure &mdash; the word beside it says which way it goes: <b>gains</b> / <b>loses</b>
+      for households and firms, <b>collects</b> / <b>pays</b> for the government. Everything is measured as a
+      change from free trade.</p>
+    <table class="cmp" data-page-node-id="q1BuY4cX9JsSqy8tV0viL0">
+      <thead data-page-node-id="ikxhEpQE5jE6CbzJ0qFmrt">
+        <tr data-page-node-id="NCcGfvkvUVYb0V8YKILIbC"><th data-page-node-id="oYam0VAoqFiGsu9HM3vElQ">Change from free trade</th><th data-page-node-id="6aS3O1logq16PW5fxks7bo">Tariff</th><th data-page-node-id="mOEyk5f9W5PuRz1VpHPAhq">Import quota</th><th data-page-node-id="GrZHyCRcVTVahzCH3ArjPV">Production subsidy</th><th>Export subsidy</th></tr>
+      </thead>
+      <tbody id="cmpBody" data-page-node-id="dYi4Wx24F7kLK9leDdQSMn"></tbody>
+    </table>
+  </section>
+
+  <footer class="note" data-page-node-id="O1Dbpb142eAIUXnOG91UG1">
+    Illustrative market: <code data-page-node-id="hoD3BxUtAgN5TA2UMjJcye">Qd = 100 &minus; 2P</code>, <code data-page-node-id="iyfjDMrvSmvHtNcUvYRHuG">Qs = 3P</code>, so autarky sits at P = 20, Q = 60.
+    The world price facing this importer is <code data-page-node-id="wXWzSZfNDg7v4aNhfDmTqY">P<sub data-page-node-id="5LPGI1A5teAsPfGr9anbly">W</sub> = 8</code>, giving free-trade imports of 60 units.
+    Every shaded polygon is measured with the shoelace formula and checked against a point-in-polygon sweep,
+    so the four areas are guaranteed to tile the band exactly.
+    In the export subsidy panel the same curves face a world price of
+    <code>P<sub>W</sub> = 22</code>, above autarky &mdash; the country exports Q3 &minus; Q2 = 10 units in free
+    trade &mdash; and there the four areas a&ndash;d tile the rectangle from P<sub>w</sub> to P<sub>w</sub>+s.
+  </footer>
+</div>
+
+<script>
+/* ================================================================ model ==== */
+const Qd = p => 100 - 2 * p;
+const Qs = p => 3 * p;
+const PW = 8;
+/* The exporter in panel 4 faces a different world price - one above the autarky
+   price of 20 - which is what makes the country an exporter rather than an importer. */
+const PWX = 22;
+
+/* =============================================================== layout ==== */
+const VW = 420, VH = 372;
+const M = { l: 52, r: 12, t: 24, b: 46 };
+const PWD = VW - M.l - M.r;
+const PHT = VH - M.t - M.b;
+const QMAX = 92;
+const PMAX = 30;
+
+const X = q => M.l + (q / QMAX) * PWD;
+const Y = p => M.t + PHT - (p / PMAX) * PHT;
+const PATH = pts => pts.map(([q, p], i) =>
+  (i ? 'L' : 'M') + X(q).toFixed(1) + ' ' + Y(p).toFixed(1)).join(' ');
+
+const COL = {
+  demand: '#17456f', supply: '#0f5f4a', world: '#a8b0b8',
+  moving: '#e0641f', axis: '#c8ced5', grid: '#eef1f4', grid2: '#f4f6f8',
+  tick: '#a8b0b8', label: '#7c858e',
+};
+const AREA_COL = {
+  gain: { fill: '#2f9e6f', op: 0.32, stroke: '#1f7d55', chip: 'chip-gain' },
+  gov:  { fill: '#e0a020', op: 0.40, stroke: '#b8801a', chip: 'chip-gov'  },
+  dwl:  { fill: '#cc4038', op: 0.40, stroke: '#a8322b', chip: 'chip-dwl'  },
+  /* panel 4 only: the three revenue rectangles that add up to producers' revenue */
+  cons: { fill: '#6d5bb5', op: 0.22, stroke: '#5b4aa4', chip: 'chip-cons' },
+  rev:  { fill: '#2f7fb0', op: 0.22, stroke: '#256b96', chip: 'chip-rev'  },
+  /* panel 4: the outer box = domestic producers' total income (1 + 2 + 3) */
+  frame: { fill: 'none', op: 0, stroke: '#3d454e', chip: 'chip-frame' },
+};
+
+/* ================================================================= areas ====
+   1  increase in producer surplus  - the trapezoid ABOVE the domestic supply curve
+   2  production inefficiency        - the triangle BELOW it, between Q1 and Q3
+   3  government revenue / quota rents - the middle rectangle
+   4  consumption inefficiency       - the triangle on the demand side
+   Together they tile the band between Sw and the new price line, exactly.        */
+
+function areasImport(pw, p1, qs0, qd0, qs1, qd1, threeName, threeCands) {
+  const t = p1 - pw;
+  if (t <= 1e-6) return [];
+  return [
+    {
+      n: 1, cls: 'gain', name: 'Increase in producer surplus', val: t * (qs0 + qs1) / 2,
+      poly: [[0, pw], [qs0, pw], [qs1, p1], [0, p1]],
+      an: [Qs((pw + p1) / 2) * 0.46, (pw + p1) / 2],
+      aw: X(Qs((pw + p1) / 2) * 0.84) - M.l, ah: Y(pw) - Y(p1),
+      cands: ['1 Increase in producer surplus', '1 Increase in|producer surplus',
+              '1 Producer|surplus', '1 PS', '1'],
+    },
+    {
+      n: 2, cls: 'dwl', name: 'Production inefficiency', val: t * (qs1 - qs0) / 2,
+      poly: [[qs0, pw], [qs1, p1], [qs1, pw]],
+      an: [qs0 + (qs1 - qs0) * 2 / 3, pw + t / 3],
+      aw: (X(qs0 + (qs1 - qs0) * 2 / 3) - X(qs0)) * 0.92, ah: (Y(pw) - Y(p1)) * 0.57,
+      cands: ['2 Production inefficiency', '2 Production|inefficiency',
+              '2 Prod.|inefficiency', '2 Inefficiency', '2'],
+    },
+    {
+      n: 3, cls: 'gov', name: threeName, val: t * (qd1 - qs1),
+      poly: [[qs1, pw], [qd1, pw], [qd1, p1], [qs1, p1]],
+      an: [(qs1 + qd1) / 2, (pw + p1) / 2],
+      aw: (X(qd1) - X(qs1)) * 0.90, ah: Y(pw) - Y(p1),
+      cands: threeCands,
+    },
+    {
+      n: 4, cls: 'dwl', name: 'Consumption inefficiency', val: t * (qd0 - qd1) / 2,
+      poly: [[qd1, p1], [qd0, pw], [qd1, pw]],
+      an: [qd1 + (qd0 - qd1) / 3, pw + t / 3],
+      aw: (X(qd1 + (qd0 - qd1) * 2 / 3) - X(qd1)) * 0.92, ah: (Y(pw) - Y(p1)) * 0.57,
+      cands: ['4 Consumption inefficiency', '4 Consumption|inefficiency',
+              '4 Cons.|inefficiency', '4 Inefficiency', '4'],
+    },
+  ];
+}
+
+const CURVES_BASE = [
+  { pts: [[Qd(PMAX), PMAX], [100, 0]], stroke: COL.demand, w: 2.4 },
+];
+
+function tariffModel(t) {
+  const pw = PW, p1 = pw + t;
+  const qs0 = Qs(pw), qd0 = Qd(pw), qs1 = Qs(p1), qd1 = Qd(p1);
+  const areas = areasImport(pw, p1, qs0, qd0, qs1, qd1, 'Government revenue',
+    ['3 Government revenue', '3 Government|revenue', '3 Gov.|revenue', '3']);
+  const cs = -(t * (qd0 + qd1) / 2);
+  const ps = areas.length ? areas[0].val : 0;
+  const v3 = areas.length ? areas[2].val : 0;
+  const v24 = areas.length ? areas[1].val + areas[3].val : 0;
+  return {
+    pw, p1, qs0, qd0, qs1, qd1, areas,
+    curves: CURVES_BASE.concat([{ pts: [[0, 0], [Qs(PMAX), PMAX]], stroke: COL.supply, w: 2.4 }]),
+    staticWorld: { from: 0, to: qd0, p: pw },
+    moving: [{
+      pts: [[0, p1], [qd1, p1]], ghost: [[0, pw], [qd0, pw]],
+      label: t > 1e-6 ? 'S world + t' : 'S world', align: 'middle',
+      lx: qd1 * 0.46, ly: p1 + 1.6,
+    }],
+    arrow: { type: 'v', q: 9, from: pw, to: p1, label: t > 1e-6 ? 'up by t' : '' },
+    flow: { label: 'imports', from: qs1, to: qd1, p: p1 },
+    ylabs: [{ p: pw, t: 'Pw', c: '#5b646e' }, { p: p1, t: 'Pw+t', c: '#c2540f' }],
+    xlabs: [{ q: qs0, t: 'Q1' }, { q: qd0, t: 'Q2' }, { q: qs1, t: 'Q3' }, { q: qd1, t: 'Q4' }],
+    band: ['Areas <b>1+2+3+4</b> exactly fill the band between S<sub>w</sub> and S<sub>w</sub>+t, so that band '
+         + '<i>is</i> the consumer surplus lost. Area 3 is collected by the government.'],
+    rows: { cs, ps, gov: v3, rents: 0, net: -v24 },
+  };
+}
+
+function quotaModel(qbar) {
+  const pw = PW;
+  const p1 = (100 - qbar) / 5;
+  const qs0 = Qs(pw), qd0 = Qd(pw), qs1 = Qs(p1), qd1 = Qd(p1);
+  const t = p1 - pw;
+  const pTop = Math.min(PMAX, (QMAX - qbar) / 3);
+  const areas = areasImport(pw, p1, qs0, qd0, qs1, qd1, 'Quota rents',
+    ['3 Quota rents', '3 Quota|rents', '3 rents', '3']);
+  const cs = -(t * (qd0 + qd1) / 2);
+  const ps = areas.length ? areas[0].val : 0;
+  const v3 = areas.length ? areas[2].val : 0;
+  const v234 = areas.length ? areas[1].val + areas[2].val + areas[3].val : 0;
+  return {
+    pw, p1, qs0, qd0, qs1, qd1, areas,
+    curves: CURVES_BASE.concat([{ pts: [[0, 0], [Qs(PMAX), PMAX]], stroke: COL.supply, w: 2.4 }]),
+    staticWorld: { from: 0, to: qd0, p: pw },
+    moving: [{
+      pts: [[0, 0], [qs0, pw], [qs0 + qbar, pw], [Qs(pTop) + qbar, pTop]],
+      ghost: [[0, 0], [qs0, pw], [qd0, pw]],
+      label: qbar < 60 ? 'supply with quota' : 'supply, no restriction',
+      auto: true, lx: Qs(3.6) + qbar, ly: 3.6,
+    }],
+    arrow: {
+      type: 'h', p: pw - 1.7, from: qs0, to: qs0 + qbar, below: true,
+      label: t > 1e-6 ? 'right by the quota' : '',
+    },
+    flow: { label: 'imports', from: qs1, to: qd1, p: p1 },
+    ylabs: [{ p: pw, t: 'Pw', c: '#5b646e' }, { p: p1, t: 'Pq', c: '#c2540f' }],
+    xlabs: [{ q: qs0, t: 'Q1' }, { q: qd0, t: 'Q2' }, { q: qs1, t: 'Q3' }, { q: qd1, t: 'Q4' }],
+    band: ['The same four areas, the same geometry &mdash; but area <b>3</b> is now <b>quota rents</b>, collected '
+         + 'by whoever holds the import licences. If those licences go abroad, the country loses 2+3+4.'],
+    rows: { cs, ps, gov: 0, rents: v3, net: -v234 },
+  };
+}
+
+function subsidyModel(s) {
+  const pw = PW;
+  const qs0 = Qs(pw), qd = Qd(pw), qs1 = Qs(pw + s);
+  const v1 = s * (qs0 + qs1) / 2;
+  const spend = s * qs1;
+  const v2 = spend - v1;
+  const midP = pw + s / 2;
+  const pTop = Math.min(PMAX, QMAX / 3 - s);
+  const areas = [];
+  if (s > 1e-6) {
+    areas.push({
+      n: null, cls: 'gov', name: 'Government spending on the subsidy (= s x Q3, the total amount of subsidy)', val: spend, rectOnly: true, order: 0,
+      poly: [[0, pw], [qs1, pw], [qs1, pw + s], [0, pw + s]],
+      an: [-99, -99], aw: 0, ah: 0, cands: [],
+    });
+    areas.push({
+      n: 1, cls: 'gain', name: 'Increase in producer surplus', val: v1, order: 1,
+      poly: [[0, pw], [qs0, pw], [qs1, pw + s], [0, pw + s]],
+      an: [Qs(midP) * 0.44, midP],
+      aw: X(Qs(midP) * 0.82) - M.l, ah: Y(pw) - Y(pw + s),
+      cands: ['1 Increase in producer surplus', '1 Increase in|producer surplus',
+              '1 Producer|surplus', '1 PS', '1'],
+    });
+    areas.push({
+      n: 2, cls: 'dwl', name: 'Deadweight loss (wasted)', val: v2, order: 2,
+      poly: [[qs0, pw], [qs1, pw], [qs1, pw + s]],
+      an: [qs0 + (qs1 - qs0) * 2 / 3, pw + s / 3],
+      aw: (X(qs0 + (qs1 - qs0) * 2 / 3) - X(qs0)) * 0.92, ah: (Y(pw) - Y(pw + s)) * 0.57,
+      cands: ['2 Deadweight loss', '2 Wasted|resources', '2 DWL', '2'],
+    });
+  }
+  const aP = Math.max(1.5, Math.min(pw + s * 0.9, pTop - 1.5));
+  return {
+    pw, p1: pw, qs0, qd0: qd, qs1, qd1: qd, areas,
+    curves: CURVES_BASE,
+    staticWorld: { from: 0, to: qd, p: pw },
+    moving: [{
+      pts: [[Qs(s), 0], [Qs(pTop + s), pTop]],
+      ghost: [[0, 0], [Qs(PMAX), PMAX]],
+      label: s > 1e-6 ? 'S domestic + s' : 'S domestic',
+      align: 'end', lx: Qs(aP + s) - 3, ly: aP + 0.9,
+    }],
+    arrow: {
+      type: 'h', p: pw * 0.28, from: Qs(pw * 0.28), to: Qs(pw * 0.28 + s),
+      label: s > 1e-6 ? 'right by 3s' : '',
+    },
+    flow: { label: 'imports', from: qs1, to: qd, p: pw },
+    ylabs: [{ p: pw, t: 'Pw', c: '#5b646e' }, { p: pw + s, t: 'Pw+s', c: '#c2540f' }],
+    xlabs: [{ q: qs0, t: 'Q1' }, { q: qd, t: 'Q2' }, { q: qs1, t: 'Q3' }],
+    band: ['The dashed rectangle is the <b>total amount of subsidy</b> the government pays out: s &times; Q3, '
+         + 'i.e. area 1 + area 2. Of that, area 1 reaches producers, area 2 is <b>wasted</b>. '
+         + 'Price and consumption never move, so there is no area 3 or 4.'],
+    rows: { cs: 0, ps: v1, gov: -spend, rents: 0, net: -v2 },
+  };
+}
+
+/* ========================================================= export subsidy ====
+   The same demand and supply curves, but now the country EXPORTS: the world
+   price Pw = 22 sits above the autarky price of 20. A per-unit export subsidy
+   lifts the domestic price to Pw + s, because firms can always sell abroad for
+   Pw and will only sell at home for the same. So consumption falls and
+   production rises.
+
+   Three rectangles tile the whole box [0, Q4] x [0, Pw+s], and together they ARE
+   what domestic producers take in:
+     1  domestic consumer spending   (Pw+s) x Q1
+     2  export earnings              Pw     x (Q4 - Q1)
+     3  the total amount of subsidy  s      x (Q4 - Q1)
+     4  domestic producers' total income = the whole box = 1 + 2 + 3
+   because 1+2+3 = (Pw+s)Q1 + (Pw+s)(Q4-Q1) = (Pw+s)Q4.
+
+   Rectangle 1 is drawn at FULL HEIGHT, from the quantity axis up to Pw+s, so the
+   three rectangles really do tile the box with no leftover corner - that is what
+   makes box 4 visible as 1+2+3.
+
+   Two triangles sit INSIDE rectangle 3 - the part of the subsidy bill that buys
+   nothing extra, so 3 CONTAINS b and d:
+     b  triangle on demand, between Q1 and Q2   consumption inefficiency
+     d  triangle on supply, between Q3 and Q4   production inefficiency
+
+   Consumer loss = s x Q1 + b      Producer gain = s x (Q3 + Q4) / 2
+   Government spending = rectangle 3           Net welfare loss = b + d          */
+function exportSubsidyModel(s) {
+  const pw = PWX, ps = pw + s;
+  const qd0 = Qd(pw), qs0 = Qs(pw);          /* Q2, Q3 - free trade            */
+  const qd1 = Qd(ps), qs1 = Qs(ps);          /* Q1, Q4 - with the subsidy      */
+  const exports1 = qs1 - qd1;
+  const consSpend = ps * qd1;                /* rectangle 1                    */
+  const expEarn = pw * exports1;             /* rectangle 2                    */
+  const subsidy = s * exports1;              /* rectangle 3                    */
+  const revenue = ps * qs1;                  /* = 1 + 2 + 3                    */
+  const vb = s * (qd0 - qd1) / 2;            /* consumption inefficiency       */
+  const vd = s * (qs1 - qs0) / 2;            /* production inefficiency        */
+  const csLoss = s * qd1 + vb;
+  const psGain = s * (qs0 + qs1) / 2;
+
+  const areas = [], hatch = [];
+  const wR = X(qs1) - X(qd1), hB = Y(pw) - Y(ps);
+  if (s > 1e-6) {
+    areas.push({
+      n: 1, cls: 'cons', name: 'Domestic consumer spending', val: consSpend, order: 0,
+      poly: [[0, 0], [qd1, 0], [qd1, ps], [0, ps]],
+      an: [qd1 * 0.5, ps * 0.52],
+      aw: (X(qd1) - M.l) * 0.9, ah: (Y(0) - Y(ps)) * 0.9,
+      cands: ['1 Domestic|consumer|spending', '1 Domestic|consumer spending',
+              '1 Consumer|spending', '1'],
+    });
+    areas.push({
+      n: 2, cls: 'rev', name: 'Export earnings', val: expEarn, order: 1,
+      poly: [[qd1, 0], [qs1, 0], [qs1, pw], [qd1, pw]],
+      an: [(qd1 + qs1) / 2, pw * 0.5],
+      aw: wR * 0.9, ah: (Y(0) - Y(pw)) * 0.9,
+      cands: ['2 Export|earnings', '2 Export earnings', '2 Exports', '2'],
+    });
+    areas.push({
+      n: 3, cls: 'gov', name: 'Total amount of subsidy', val: subsidy, order: 2, outlineOnTop: true,
+      poly: [[qd1, pw], [qs1, pw], [qs1, ps], [qd1, ps]],
+      an: [(qd1 + qs1) / 2, (pw + ps) / 2],
+      aw: wR * 0.95, ah: hB * 0.95,
+      cands: ['3 Total amount|of subsidy', '3 Total|subsidy', '3 Subsidy', '3'],
+    });
+    hatch.push({
+      n: 'b', cls: 'dwl', name: 'Consumption inefficiency', val: vb,
+      poly: [[qd1, pw], [qd0, pw], [qd1, ps]],
+      an: [qd1 + (qd0 - qd1) / 3, pw + s / 3],
+      aw: (X(qd1 + (qd0 - qd1) * 2 / 3) - X(qd1)) * 0.92, ah: hB * 0.57,
+      cands: ['b Consumption|inefficiency', 'b Inefficiency', 'b'],
+    });
+    hatch.push({
+      n: 'd', cls: 'dwl', name: 'Production inefficiency', val: vd,
+      poly: [[qs0, pw], [qs1, pw], [qs1, ps]],
+      an: [qs0 + (qs1 - qs0) * 2 / 3, pw + s / 3],
+      aw: (X(qs0 + (qs1 - qs0) * 2 / 3) - X(qs0)) * 0.92, ah: hB * 0.57,
+      cands: ['d Production|inefficiency', 'd Inefficiency', 'd'],
+    });
+  }
+  return {
+    pw, p1: ps, qs0, qd0, qs1, qd1, areas, hatch,
+    frame: s > 1e-6 ? {
+      poly: [[0, 0], [qs1, 0], [qs1, ps], [0, ps]],
+      lx: qs1 / 2, ly: ps,
+      label: 'Domestic producers\u2019 total income = areas 1, 2 and 3',
+    } : null,
+    parts: { cons: consSpend, exp: expEarn, sub: subsidy, rev: revenue, b: vb, d: vd,
+             csLoss, psGain, exports1 },
+    curves: CURVES_BASE.concat([{ pts: [[0, 0], [Qs(PMAX), PMAX]], stroke: COL.supply, w: 2.4 }]),
+    staticWorld: { from: 0, to: qd0, p: pw },
+    moving: [{
+      pts: [[0, ps], [qs1, ps]], ghost: [[0, pw], [qs0, pw]],
+      label: s > 1e-6 ? 'P domestic = Pw + s' : 'P domestic = Pw',
+      align: 'middle', lx: qd1 * 0.35, ly: s > 1e-6 ? ps - 1.7 : ps + 1.6,
+    }],
+    arrow: { type: 'v', q: 4, from: pw, to: ps, label: s > 1e-6 ? 'up by s' : '' },
+    ylabs: [{ p: pw, t: 'Pw', c: '#5b646e' }, { p: ps, t: 'Pw+s', c: '#c2540f' }],
+    xlabs: [{ q: qd1, t: 'Q1' }, { q: qd0, t: 'Q2' }, { q: qs0, t: 'Q3' }, { q: qs1, t: 'Q4' }],
+    band: ['The dashed box is <b>4 &mdash; domestic producers&rsquo; total income</b>, and the three '
+         + 'rectangles tile it exactly: <b>1</b> domestic consumer spending '
+         + '<b>(P<sub>w</sub>+s)&times;Q1</b>, <b>2</b> export earnings '
+         + '<b>P<sub>w</sub>&times;(Q4&minus;Q1)</b>, <b>3</b> the <b>total amount of subsidy</b> '
+         + '<b>s&times;(Q4&minus;Q1)</b>. The two hatched triangles are drawn <b>inside rectangle 3</b> '
+         + '&mdash; <b>b</b> is consumption inefficiency, <b>d</b> is production inefficiency. That part '
+         + 'of the subsidy bill buys nothing, so the net welfare loss is <b>b + d</b>.'],
+    rows: { cs: -csLoss, ps: psGain, gov: -subsidy, rents: 0, net: -(vb + vd) },
+  };
+}
+
+const PANELS = [
+  {
+    id: 'tariff', title: 'Tariff', tag: 'moves: S world',
+    sub: 'The world supply line shifts <b>up</b> by the tariff. Demand and domestic supply stay still.',
+    ctlLabel: 'Tariff per unit, t', min: 0, max: 12, step: 0.5, zero: 0,
+    minLabel: '0 (free trade)', maxLabel: '12',
+    model: tariffModel,
+  },
+  {
+    id: 'quota', title: 'Import quota', tag: 'moves: total supply',
+    sub: 'Total supply shifts <b>right</b> by the quota. Demand, domestic supply and S<sub>w</sub> stay still.',
+    ctlLabel: 'Import quota, units', min: 0, max: 60, step: 1, zero: 60,
+    minLabel: '0 (import ban)', maxLabel: '60 (free trade)',
+    model: quotaModel,
+  },
+  {
+    id: 'subsidy', title: 'Production subsidy', tag: 'moves: domestic supply',
+    sub: 'Domestic supply shifts <b>down</b> by the subsidy. Demand and the world price stay still.',
+    ctlLabel: 'Subsidy per unit, s', min: 0, max: 16, step: 0.5, zero: 0,
+    minLabel: '0 (free trade)', maxLabel: '16',
+    model: subsidyModel,
+  },
+  {
+    id: 'exportsubsidy', title: 'Export subsidy', tag: 'moves: the domestic price',
+    sub: 'The domestic price line shifts <b>up</b> to P<sub>w</sub>+s &mdash; the country now exports this good. '
+       + 'Demand and domestic supply stay still.',
+    ctlLabel: 'Export subsidy per unit, s', min: 0, max: 7, step: 0.5, zero: 0,
+    minLabel: '0 (free trade)', maxLabel: '7',
+    dLabP: 6, sLabP: 9,
+    model: exportSubsidyModel,
+  },
+];
+
+/* ======================================================= label fitting ==== */
+function pickLabel(cands, aw, ah) {
+  const tiers = [9.4, 8.2];
+  for (const fs of tiers) {
+    for (const c of cands) {
+      const lines = c.split('|');
+      const w = Math.max(...lines.map(s => s.length * fs * 0.545));
+      const h = lines.length * (fs + 1.8);
+      if (w <= aw && h <= ah) return { lines, fs };
+    }
+  }
+  return null;
+}
+
+/* ============================================================= renderer ==== */
+const state = { areas: true, guides: true, v: [0, 60, 0] };
+const $ = id => document.getElementById(id);
+
+function svgFor(cfg, i) {
+  const r = cfg.model(state.v[i]);
+  const near = (a, b) => Math.abs(a - b) < 0.08;
+  let s = '';
+
+  s += '<svg viewBox="0 0 ' + VW + ' ' + VH + '" xmlns="http://www.w3.org/2000/svg" role="img">';
+  s += '<defs>';
+  s += '<marker id="ah' + i + '" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5"'
+     + ' orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"'
+     + ' stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>';
+  s += '<marker id="ahb' + i + '" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6"'
+     + ' orient="auto-start-reverse"><path d="M2.4 1.4L8 5L2.4 8.6" fill="none" stroke="context-stroke"'
+     + ' stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>';
+  s += '<pattern id="hatch' + i + '" width="6" height="6" patternUnits="userSpaceOnUse"'
+     + ' patternTransform="rotate(45)">'
+     + '<rect width="6" height="6" fill="#cc4038" fill-opacity="0.16"/>'
+     + '<line x1="0" y1="0" x2="0" y2="6" stroke="#a8322b" stroke-width="1.7" stroke-opacity="0.75"/>'
+     + '</pattern>';
+  s += '</defs>';
+  for (let p = 0; p <= PMAX + 1e-9; p += 5) {
+    const yy = Y(p);
+    s += '<line x1="' + M.l + '" y1="' + yy.toFixed(1) + '" x2="' + (M.l + PWD) + '" y2="' + yy.toFixed(1)
+       + '" stroke="' + COL.grid + '" stroke-width="1"/>';
+    /* skip any tick number that would sit on top of a named price label (Pw, Pw+s, ...) */
+    if (!r.ylabs.some(l => Math.abs(l.p - p) < 1.3)) {
+      s += '<text x="' + (M.l - 7) + '" y="' + (yy + 3.6).toFixed(1) + '" text-anchor="end" font-size="9.5" fill="'
+         + COL.tick + '">' + p + '</text>';
+    }
+  }
+  for (let q = 0; q <= QMAX; q += 20) {
+    const xx = X(q);
+    s += '<line x1="' + xx.toFixed(1) + '" y1="' + M.t + '" x2="' + xx.toFixed(1) + '" y2="' + (M.t + PHT)
+       + '" stroke="' + COL.grid2 + '" stroke-width="1"/>';
+    s += '<text x="' + xx.toFixed(1) + '" y="' + (M.t + PHT + 14) + '" text-anchor="middle" font-size="9.5" fill="'
+       + COL.tick + '">' + q + '</text>';
+  }
+  s += '<line x1="' + M.l + '" y1="' + (M.t + PHT) + '" x2="' + (M.l + PWD) + '" y2="' + (M.t + PHT)
+     + '" stroke="' + COL.axis + '" stroke-width="1.3"/>';
+  s += '<line x1="' + M.l + '" y1="' + M.t + '" x2="' + M.l + '" y2="' + (M.t + PHT) + '" stroke="' + COL.axis
+     + '" stroke-width="1.3"/>';
+  s += '<text x="' + M.l + '" y="' + (M.t - 11) + '" font-size="10" fill="' + COL.label + '">Price</text>';
+  /* the axis title sits inside the plot at the bottom right, so it can never run
+     into the last of the Q1..Q4 labels under the axis */
+  s += '<text x="' + (M.l + PWD - 4) + '" y="' + (M.t + PHT - 7) + '" text-anchor="end" font-size="10" fill="'
+     + COL.label + '">Quantity</text>';
+
+  if (state.areas && r.areas.length) {
+    const ordered = r.areas.slice().sort((a, b) =>
+      (a.order === undefined ? 0 : a.order) - (b.order === undefined ? 0 : b.order));
+    ordered.forEach(a => {
+      const st = AREA_COL[a.cls];
+      s += '<path d="' + PATH(a.poly) + ' Z" fill="' + st.fill + '" fill-opacity="' + st.op + '" stroke="'
+         + st.stroke + '" stroke-opacity="' + (a.rectOnly ? '.85' : '.5') + '" stroke-width="1"'
+         + (a.rectOnly ? ' stroke-dasharray="4 3"' : '') + '/>';
+    });
+  }
+
+  if (state.areas && r.hatch && r.hatch.length) {
+    r.hatch.forEach(a => {
+      s += '<path d="' + PATH(a.poly) + ' Z" fill="url(#hatch' + i + ')" stroke="#a8322b"'
+         + ' stroke-width="1.3" stroke-dasharray="4 3" stroke-linejoin="round"/>';
+    });
+  }
+  /* rectangles that must read as the container of the hatched triangles are
+     re-stroked on top, so the box visibly holds b and d instead of the other
+     way round */
+  if (state.areas && r.areas.length) {
+    r.areas.forEach(a => {
+      if (!a.outlineOnTop) return;
+      const st = AREA_COL[a.cls];
+      s += '<path d="' + PATH(a.poly) + ' Z" fill="none" stroke="' + st.stroke + '" stroke-width="1.7"/>';
+    });
+  }
+  if (state.areas && r.frame) {
+    s += '<path d="' + PATH(r.frame.poly) + ' Z" fill="none" stroke="#3d454e" stroke-width="2.1"'
+       + ' stroke-dasharray="8 3"/>';
+    if (r.frame.label) {
+      /* the demand curve always crosses the caption (it leaves the box at its top
+         left corner), so the caption is drawn twice: a white halo first, then the
+         text - this keeps "4" readable without moving it off the box it names */
+      const fx = X(r.frame.lx).toFixed(1), fy = (Y(r.frame.ly) - 5).toFixed(1);
+      const cap = '<tspan font-size="11.5" font-weight="800">4</tspan>'
+                + '<tspan dx="5">' + r.frame.label + '</tspan>';
+      s += '<text x="' + fx + '" y="' + fy + '" text-anchor="middle" font-size="9.6" font-weight="700"'
+         + ' fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linejoin="round">' + cap + '</text>';
+      s += '<text x="' + fx + '" y="' + fy + '" text-anchor="middle" font-size="9.6" font-weight="700"'
+         + ' fill="#3d454e">' + cap + '</text>';
+    }
+  }
+
+  if (state.guides) {
+    const seen = {};
+    [[r.qs0, '#2f9e6f'], [r.qs1, '#2f9e6f'], [r.qd1, '#2e6ca4'], [r.qd0, '#2e6ca4']].forEach(function (pair) {
+      const q = pair[0], c = pair[1];
+      const k = q.toFixed(2);
+      if (seen[k]) return;
+      seen[k] = 1;
+      const xx = X(q);
+      s += '<line x1="' + xx.toFixed(1) + '" y1="' + Y(r.pw).toFixed(1) + '" x2="' + xx.toFixed(1) + '" y2="'
+         + (M.t + PHT) + '" stroke="' + c + '" stroke-width="0.9" stroke-dasharray="3 4" stroke-opacity=".5"/>';
+    });
+  }
+
+  if (r.staticWorld) {
+    const w = r.staticWorld;
+    s += '<line x1="' + X(w.from).toFixed(1) + '" y1="' + Y(w.p).toFixed(1) + '" x2="' + X(w.to).toFixed(1)
+       + '" y2="' + Y(w.p).toFixed(1) + '" stroke="' + COL.world + '" stroke-width="1.6"/>';
+    s += '<text x="' + (X(6) + 4).toFixed(1) + '" y="' + (Y(w.p) + 3.5).toFixed(1) + '" font-size="9.5" fill="'
+       + COL.label + '">S<tspan font-size="7.5" dy="2">w</tspan></text>';
+  }
+
+  r.curves.forEach(c => {
+    s += '<path d="' + PATH(c.pts) + '" fill="none" stroke="' + c.stroke + '" stroke-width="' + c.w
+       + '" stroke-linecap="round"/>';
+  });
+
+  r.moving.forEach(mv => {
+    if (mv.ghost && mv.ghost.length > 1) {
+      s += '<path d="' + PATH(mv.ghost) + '" fill="none" stroke="#b9c2cc" stroke-width="2"'
+         + ' stroke-dasharray="6 5" stroke-linecap="round"/>';
+    }
+    s += '<path d="' + PATH(mv.pts) + '" fill="none" stroke="' + COL.moving + '" stroke-width="3"'
+       + ' stroke-linecap="round"/>';
+  });
+
+  if (r.flow && Math.abs(r.flow.to - r.flow.from) > 0.4) {
+    const yy = Y(r.flow.p) - 8;
+    const a = X(r.flow.from), b = X(r.flow.to);
+    s += '<line x1="' + a.toFixed(1) + '" y1="' + yy.toFixed(1) + '" x2="' + b.toFixed(1) + '" y2="'
+       + yy.toFixed(1) + '" stroke="#5b646e" stroke-width="1.2" marker-start="url(#ahb' + i
+       + ')" marker-end="url(#ahb' + i + ')"/>';
+    if (b - a > 52) {
+      s += '<text x="' + ((a + b) / 2).toFixed(1) + '" y="' + (yy - 5).toFixed(1)
+         + '" text-anchor="middle" font-size="9.5" fill="#5b646e">' + r.flow.label + ' = '
+         + Math.abs(r.flow.to - r.flow.from).toFixed(1) + '</text>';
+    }
+  }
+
+  if (r.arrow && r.arrow.label) {
+    const ar = r.arrow;
+    if (ar.type === 'v') {
+      const xx = X(ar.q);
+      const yT = Y(Math.max(ar.from, ar.to)), yB = Y(Math.min(ar.from, ar.to));
+      if (yB - yT > 18) {
+        s += '<line x1="' + xx.toFixed(1) + '" y1="' + (yB - 4).toFixed(1) + '" x2="' + xx.toFixed(1) + '" y2="'
+           + (yT + 4).toFixed(1) + '" stroke="' + COL.moving + '" stroke-width="1.7" marker-end="url(#ah' + i + ')"/>';
+        const tw = ar.label.length * 5.2;
+        const lx = Math.min(Math.max(xx, M.l + 6 + tw / 2), M.l + PWD - 6 - tw / 2);
+        s += '<text x="' + lx.toFixed(1) + '" y="' + (yB + 12).toFixed(1) + '" text-anchor="middle" font-size="9.5" fill="'
+           + COL.moving + '">' + ar.label + '</text>';
+      }
+    } else {
+      const yy = Y(ar.p);
+      const a = X(Math.min(ar.from, ar.to)), b = X(Math.max(ar.from, ar.to));
+      if (b - a > 18) {
+        s += '<line x1="' + (a + 4).toFixed(1) + '" y1="' + yy.toFixed(1) + '" x2="' + (b - 4).toFixed(1) + '" y2="'
+           + yy.toFixed(1) + '" stroke="' + COL.moving + '" stroke-width="1.7" marker-end="url(#ah' + i + ')"/>';
+        if (b - a > 70) {
+          s += '<text x="' + ((a + b) / 2).toFixed(1) + '" y="' + (yy + (ar.below ? 12 : -6)).toFixed(1)
+             + '" text-anchor="middle" font-size="9.5" fill="' + COL.moving + '">' + ar.label + '</text>';
+        }
+      }
+    }
+  }
+
+  [[r.qs1, r.p1, '#2f9e6f'], [r.qd1, r.p1, '#2e6ca4']].forEach(function (t) {
+    if (near(t[0], r.qs0) && near(t[1], r.pw)) return;
+    s += '<circle cx="' + X(t[0]).toFixed(1) + '" cy="' + Y(t[1]).toFixed(1) + '" r="4.2" fill="#fff" stroke="'
+       + t[2] + '" stroke-width="2.3"/>';
+  });
+
+  s += '<line x1="' + M.l + '" y1="' + Y(r.pw).toFixed(1) + '" x2="' + X(r.qd0).toFixed(1) + '" y2="'
+     + Y(r.pw).toFixed(1) + '" stroke="' + COL.world + '" stroke-width="1" stroke-dasharray="3 4"/>';
+  if (!near(r.p1, r.pw)) {
+    s += '<line x1="' + M.l + '" y1="' + Y(r.p1).toFixed(1) + '" x2="' + X(Math.max(r.qd1, r.qs1)).toFixed(1)
+       + '" y2="' + Y(r.p1).toFixed(1) + '" stroke="' + COL.moving + '" stroke-width="1.1" stroke-dasharray="3 4"'
+       + ' stroke-opacity=".8"/>';
+  }
+  r.ylabs.forEach(l => {
+    if (l.t !== 'Pw' && near(l.p, r.pw)) return;
+    s += '<text x="' + (M.l - 7) + '" y="' + (Y(l.p) + 3.6).toFixed(1) + '" text-anchor="end" font-size="10"'
+       + ' font-weight="650" fill="' + l.c + '">' + l.t + '</text>';
+  });
+  r.xlabs.forEach(l => {
+    s += '<text x="' + X(l.q).toFixed(1) + '" y="' + (M.t + PHT + 26) + '" text-anchor="middle" font-size="10"'
+       + ' font-weight="650" fill="#5b646e">' + l.t + '</text>';
+  });
+
+  const dLabP = cfg.dLabP !== undefined ? cfg.dLabP : PMAX * 0.18;
+  s += '<text x="' + (X(Qd(dLabP)) - 5).toFixed(1) + '" y="' + (Y(dLabP) + 13).toFixed(1)
+     + '" text-anchor="end" font-size="10.5" font-weight="650" fill="' + COL.demand + '">Demand</text>';
+  if (cfg.id !== 'subsidy') {
+    const sLabP = cfg.sLabP !== undefined ? cfg.sLabP : PMAX * 0.90;
+    s += '<text x="' + (X(Qs(sLabP)) - 5).toFixed(1) + '" y="' + (Y(sLabP) + 13).toFixed(1)
+       + '" text-anchor="end" font-size="10.5" font-weight="650" fill="' + COL.supply + '">S domestic</text>';
+  }
+
+  r.moving.forEach(mv => {
+    let anchor, ax;
+    const tw = mv.label.length * 5.7;
+    if (mv.auto) {
+      const cx = X(mv.lx);
+      if (cx + 8 + tw <= M.l + PWD - 4) { anchor = 'start'; ax = cx + 8; }
+      else { anchor = 'end'; ax = Math.max(cx - 8, M.l + 6 + tw); }
+    } else {
+      anchor = mv.align === 'end' ? 'end' : 'middle';
+      ax = X(mv.lx);
+    }
+    s += '<text x="' + ax.toFixed(1) + '" y="' + Y(mv.ly).toFixed(1) + '" text-anchor="' + anchor
+       + '" font-size="10" font-weight="650" fill="' + COL.moving + '">' + mv.label + '</text>';
+  });
+
+  if (state.areas) {
+    r.areas.concat(r.hatch || []).forEach(a => {
+      if (!a.cands || !a.cands.length) return;
+      const fit = pickLabel(a.cands, a.aw, a.ah);
+      if (!fit) return;
+      const ax = X(a.an[0]), ay = Y(a.an[1]);
+      const lh = fit.fs + 1.8;
+      const y0 = ay - (fit.lines.length - 1) * lh / 2 + fit.fs * 0.35;
+      fit.lines.forEach((ln, k) => {
+        const m = ln.match(/^([0-9a-dA-D])\s+(.*)$/);
+        s += '<text x="' + ax.toFixed(1) + '" y="' + (y0 + k * lh).toFixed(1) + '" text-anchor="middle"'
+           + ' font-size="' + fit.fs + '" fill="#1d2b22">';
+        if (m) {
+          s += '<tspan font-weight="800">' + m[1] + '</tspan><tspan> ' + m[2] + '</tspan>';
+        } else {
+          s += '<tspan font-weight="800">' + ln + '</tspan>';
+        }
+        s += '</text>';
+      });
+    });
+  }
+
+  s += '</svg>';
+  return s;
+}
+
+/* Every figure the student sees is a size, never a signed number: the direction
+   is carried by a word (gain / loss / revenue / ...), the colour, and the cell.
+   So no value here is ever rendered with a plus or a minus in front of it. */
+function sizeOf(v) {
+  return Math.abs(v).toFixed(1);
+}
+
+function renderPanel(i) {
+  const cfg = PANELS[i];
+  const r = cfg.model(state.v[i]);
+  $('h' + i).innerHTML = svgFor(cfg, i);
+  $('v' + i).textContent = (cfg.id === 'quota' ? '' : '$')
+    + state.v[i].toFixed(cfg.step < 1 ? 1 : 0) + (cfg.id === 'quota' ? ' units' : '');
+  $('s' + i).value = state.v[i];
+  $('n' + i).innerHTML = r.band;
+
+  const items = [];
+  if (cfg.id === 'subsidy') {
+    items.push({ n: 1, cls: 'gain', nm: 'Increase in producer surplus', vl: r.rows.ps, w: 'gain', tone: 'gain' });
+    items.push({ n: 2, cls: 'dwl', nm: 'Deadweight loss (wasted)', vl: -r.rows.net, w: 'loss', tone: 'loss' });
+    items.push({ n: null, lbl: '$', cls: 'gov', nm: 'Government spending on production subsidy (total)', vl: -r.rows.gov, w: 'spends', tone: 'money' });
+  } else if (cfg.id === 'exportsubsidy') {
+    const P = r.parts;
+    items.push({ n: 1, cls: 'cons', nm: 'Domestic consumer spending', vl: P.cons, w: 'paid', tone: 'money' });
+    items.push({ n: 2, cls: 'rev', nm: 'Export earnings', vl: P.exp, w: 'earned', tone: 'gain' });
+    items.push({ n: 3, cls: 'gov', nm: 'Total amount of subsidy', vl: P.sub, w: 'spends', tone: 'money' });
+    items.push({ n: 'b', cls: 'dwl', sub: true, nm: 'Consumption inefficiency '
+      + '<span class="in3">inside area 3</span>', vl: P.b, w: 'loss', tone: 'loss' });
+    items.push({ n: 'd', cls: 'dwl', sub: true, nm: 'Production inefficiency '
+      + '<span class="in3">inside area 3</span>', vl: P.d, w: 'loss', tone: 'loss' });
+    items.push({ n: 4, cls: 'frame', nm: 'Domestic producers&rsquo; total income '
+      + '<span class="in3">= areas 1, 2 and 3</span>', vl: P.rev, w: 'total', tone: 'gain' });
+    items.push({ n: null, cls: 'dwl', nm: 'Net welfare loss', vl: P.b + P.d, w: 'loss', tone: 'loss' });
+  } else {
+    const three = cfg.id === 'tariff' ? 'Government revenue' : 'Quota rents';
+    const threeW = cfg.id === 'tariff' ? 'revenue' : 'rents';
+    items.push({ n: 1, cls: 'gain', nm: 'Increase in producer surplus', vl: r.areas.length ? r.areas[0].val : 0, w: 'gain', tone: 'gain' });
+    items.push({ n: 2, cls: 'dwl', nm: 'Production inefficiency', vl: r.areas.length ? r.areas[1].val : 0, w: 'loss', tone: 'loss' });
+    items.push({ n: 3, cls: 'gov', nm: three, vl: r.areas.length ? r.areas[2].val : 0, w: threeW, tone: 'money' });
+    items.push({ n: 4, cls: 'dwl', nm: 'Consumption inefficiency', vl: r.areas.length ? r.areas[3].val : 0, w: 'loss', tone: 'loss' });
+    items.push({ n: null, cls: 'dwl', nm: 'Net welfare loss', vl: r.rows.net < 0 ? -r.rows.net : 0, w: 'loss', tone: 'loss' });
+  }
+  $('k' + i).innerHTML = items.map(it => {
+    const chip = AREA_COL[it.cls].chip + (it.n === null ? ' dash' : '');
+    const label = it.lbl || (it.n === null ? '&Sigma;' : it.n);
+    const val = it.vl < 0.05
+      ? '<span class="dir move">no change</span>'
+      : '<span class="dir ' + it.tone + '">' + it.w + '</span>'
+        + '<span class="vl ' + (it.tone === 'loss' ? 'neg' : (it.tone === 'gain' ? 'pos' : 'mid')) + '">'
+        + it.vl.toFixed(1) + '</span>';
+    return '<li' + (it.sub ? ' class="sub"' : '') + '><span class="num ' + chip + '">' + label
+      + '</span><span class="nm">' + it.nm + '</span>' + val + '</li>';
+  }).join('');
+}
+
+function renderCompare() {
+  const rs = PANELS.map((p, i) => p.model(state.v[i]).rows);
+  const cell = (v, up, down) => {
+    if (Math.abs(v) < 0.05) return '<td class="zero">no change</td>';
+    return '<td class="' + (v > 0 ? 'pos' : 'neg') + '">' + sizeOf(v)
+      + ' <span class="dw">' + (v > 0 ? up : down) + '</span></td>';
+  };
+  const defs = [
+    ['Consumer surplus', 'cs', 'gains', 'loses'],
+    ['Producer surplus', 'ps', 'gains', 'loses'],
+    ['Government budget', 'gov', 'collects', 'spends'],
+    ['Quota rents (licence holders)', 'rents', 'collects', 'loses'],
+  ];
+  let html = defs.map(d =>
+    '<tr><td>' + d[0] + '</td>' + rs.map(r => cell(r[d[1]], d[2], d[3])).join('') + '</tr>').join('');
+  html += '<tr class="net"><td>Net welfare change</td>'
+    + rs.map(r => cell(r.net, 'gains', 'loses')).join('') + '</tr>';
+  $('cmpBody').innerHTML = html;
+}
+
+function renderAll() {
+  PANELS.forEach((p, i) => renderPanel(i));
+  renderCompare();
+  $('hintText').textContent = state.areas ? '' : 'Areas hidden - the curve that moves is still in orange.';
+}
+
+/* ============================================================== wiring ==== */
+$('panels').innerHTML = PANELS.map((p, i) =>
+  '<section class="panel">'
+  + '<div class="phead"><h2>' + p.title + '</h2><span class="tag">' + p.tag + '</span></div>'
+  + '<p class="psub">' + p.sub + '</p>'
+  + '<div class="pctl"><div class="row"><label for="s' + i + '">' + p.ctlLabel + '</label>'
+  + '<span class="pval" id="v' + i + '"></span></div>'
+  + '<input type="range" id="s' + i + '" min="' + p.min + '" max="' + p.max + '" step="' + p.step + '">'
+  + '<div class="pscale"><span>' + p.minLabel + '</span><span>' + p.maxLabel + '</span></div></div>'
+  + '<div class="stage" id="h' + i + '"></div>'
+  + '<ul class="key" id="k' + i + '"></ul>'
+  + '<p class="bandnote" id="n' + i + '"></p>'
+  + '</section>').join('');
+
+PANELS.forEach((p, i) => {
+  $('s' + i).addEventListener('input', e => {
+    stopAnim();
+    state.v[i] = Number(e.target.value);
+    renderPanel(i);
+    renderCompare();
+  });
+});
+$('cAreas').addEventListener('change', e => { state.areas = e.target.checked; renderAll(); });
+$('cGuides').addEventListener('change', e => { state.guides = e.target.checked; renderAll(); });
+$('resetAll').addEventListener('click', () => {
+  stopAnim();
+  state.v = PANELS.map(p => p.zero);
+  state.areas = true; state.guides = true;
+  $('cAreas').checked = true; $('cGuides').checked = true;
+  renderAll();
+});
+
+let raf = null;
+function stopAnim() {
+  if (raf) { cancelAnimationFrame(raf); raf = null; }
+  $('playAll').textContent = 'Animate all three';
+}
+const easeInOut = t => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+
+$('playAll').addEventListener('click', () => {
+  if (raf) { stopAnim(); return; }
+  const from = PANELS.map(p => p.zero);
+  const to = PANELS.map(p => (Math.abs(p.zero - p.min) > Math.abs(p.zero - p.max) ? p.min : p.max));
+  const dur = 1600;
+  const t0 = performance.now();
+  $('playAll').textContent = 'Stop';
+  const tick = now => {
+    const cycle = Math.min((now - t0) / dur, 2);
+    const t = cycle <= 1 ? cycle : 2 - cycle;
+    const e = easeInOut(t);
+    PANELS.forEach((p, i) => {
+      state.v[i] = from[i] + (to[i] - from[i]) * e;
+      renderPanel(i);
+    });
+    renderCompare();
+    if (cycle >= 2) {
+      state.v = from.slice();
+      renderAll();
+      stopAnim();
+      return;
+    }
+    raf = requestAnimationFrame(tick);
+  };
+  raf = requestAnimationFrame(tick);
+});
+
+state.v = PANELS.map(p => p.zero);
+renderAll();
+</script>
+</body>
+</html>
